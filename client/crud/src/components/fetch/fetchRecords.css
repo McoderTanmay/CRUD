@@ -1,0 +1,8 @@
+.outer{
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+}

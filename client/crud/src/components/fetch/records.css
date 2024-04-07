@@ -1,0 +1,16 @@
+.record-cover{
+    display: flex;
+    flex-direction: row;
+}
+.record-details{
+    display: flex;
+    flex-direction: column;
+}
+.name,.email,.phone{
+    padding-top: 1em;
+}
+.update-btn{
+    text-decoration: none;
+    background-color: rgb(105, 0, 105);
+    color: white;
+}
