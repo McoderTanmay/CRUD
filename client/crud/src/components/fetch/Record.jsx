@@ -1,17 +1,16 @@
 import "./records.css";
+import Card from 'react-bootstrap/Card';
 
-function Records() {
+function Records({key, details}) {
   return (
-    <>
-      <div className="record-cover">
-        <div className="record-details">
-          <div className="name">Tanmay Sontakke</div>
-          <div className="email">tanmaysontakke99@gmail.com</div>
-          <div className="phone">7058759096</div>
-        </div>
-        <div className="update-btn"><button>Update</button></div>
-      </div>
-    </>
+    <Card className="me-3 mt-4" style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Text>{details?.name}</Card.Text>
+        <Card.Text>{details?.email}</Card.Text>
+        <Card.Text>{details?.phone}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 }
 

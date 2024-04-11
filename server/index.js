@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const uri = "mongodb://127.0.0.1:27017/xyz"
+// const uri = "mongodb+srv://tanmaysontakke99:EYMMEaKEG8O2phOP@mycluster.2f1acsn.mongodb.net/?retryWrites=true&w=majority&appName=myClusterz"
 const USER_ROUTER = require("./routers/userRoutes");
 
 const app = express();

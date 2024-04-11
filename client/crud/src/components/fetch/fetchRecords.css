@@ -1,8 +1,15 @@
 .outer{
-    padding-top: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
-    background-color: black;
-    width: 100%;
+    width: 60%;
     height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+.fetch-btn{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.custom-fetch-button{
+    background-color: rgb(76, 44, 125) !important;
+    border: none !important;
 }

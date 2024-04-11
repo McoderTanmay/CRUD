@@ -1,0 +1,18 @@
+.record-form{
+    width: 60%;
+    background-color: rgb(149, 86, 244);
+    height: fit-content;
+    margin-top: 2em;
+    padding:1rem 1rem;
+    border-radius: 16px;
+}
+.submit-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.submit-btn > button{
+    background-color: rgb(76, 44, 125);
+    border: none;
+    width: 70px;
+}
