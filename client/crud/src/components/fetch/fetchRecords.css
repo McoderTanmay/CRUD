@@ -1,7 +1,9 @@
 .outer{
-    width: 60%;
+    width: 70%;
     height: fit-content;
     display: flex;
+    flex-wrap: wrap;
+
     flex-direction: row;
 }
 .fetch-btn{

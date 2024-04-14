@@ -5,27 +5,48 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
-function AddRecord() {
-  const [validated, setValidated] = useState(false);
+function AddRecord({onAdd}) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+    event.preventDefault();
+    const data = {
+      name:name,
+      email:email,
+      phone:phone,
+      password:password
     }
-
-    setValidated(true);
+    onAdd(data);
+    setName("");
+    setEmail("");
+    setPassword("");
+    setPhone("");
   };
-
+  function nameChangeHandeler(event){
+    setName(event.target.value);
+  }
+  function emailChangeHandeler(event){
+    setEmail(event.target.value);
+  }
+  function phoneChangeHandeler(event){
+    setPhone(event.target.value);
+  }
+  function passwordChangeHandeler(event){
+    setPassword(event.target.value);
+  }
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit} className="record-form">
+    <Form onSubmit={handleSubmit} className="record-form">
       <Row className="mb-3 justify-content-center">
         <Form.Group as={Col} md="5" controlId="validationCustom01">
           <Form.Label>Name</Form.Label>
           <Form.Control
             required
             type="text"
+            onChange={nameChangeHandeler}
+            value={name}
             placeholder="Name"
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -35,6 +56,8 @@ function AddRecord() {
           <Form.Control
             required
             type="Number"
+            onChange={phoneChangeHandeler}
+            value={phone}
             placeholder="Phone Number"
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -43,11 +66,11 @@ function AddRecord() {
       <Row className="mb-3 justify-content-center">
         <Form.Group as={Col} md="5" controlId="validationCustom03">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Email" required />
+          <Form.Control type="email" placeholder="Email" onChange={emailChangeHandeler} value={email} required />
         </Form.Group>
         <Form.Group as={Col} md="5" controlId="validationCustom04">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" required />
+          <Form.Control type="password" placeholder="Password" onChange={passwordChangeHandeler} value={password} required />
         </Form.Group>
       </Row>
       <div className="submit-btn">

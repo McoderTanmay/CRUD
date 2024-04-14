@@ -6,7 +6,6 @@ export const getRequest = async (url) => {
     const data = response.json();
     return data;
   } catch (error) {
-    console.log(1);
     return error;
   }
 };
@@ -18,10 +17,12 @@ export const postRequest = async (url, data) => {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: data,
+    body:JSON.stringify(data),
   });
   if (!response.ok) {
-    return { error: true, message: "An error occoured" };
+    console.log("Error");
+    return { error: true, message: "An error occoured ", response };
   }
+  console.log(response);
   return response;
 };

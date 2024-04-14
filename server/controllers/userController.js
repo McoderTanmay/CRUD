@@ -24,7 +24,7 @@ module.exports = {
       console.log(error);
       return res
         .status(500)
-        .send({ code: 500, status: "failed", massage: error.massage });
+        .send({ code: 500, status: "failed", message: error.message });
     }
   },
 //   Function for finding all Documents in Database

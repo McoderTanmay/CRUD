@@ -4,7 +4,7 @@ import { getRequest, baseUrl } from "../utils/services";
 
 export const fetchContext = createContext();
 
-export const FetchContextProvider = ({children}) =>{
+export const FetchContextProvider = ({children, fetchRecords}) =>{
     const [records, setRecords] = useState(null);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false); 
@@ -21,7 +21,7 @@ export const FetchContextProvider = ({children}) =>{
             }
         }
         getAllDocuments();
-    },[])
+    },[fetchRecords])
     
     FetchContextProvider.propType ={
         children : PropType.node.isRequired,
