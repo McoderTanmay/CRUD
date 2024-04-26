@@ -60,7 +60,7 @@ module.exports = {
     }
   },
   async getDocumentById(req, res){
-    let id = req.body.id;
+    let id = req.params.id;
     try {
         const user = await userQuery.findDocById(id);
         return res.status(200).send({
@@ -76,7 +76,7 @@ module.exports = {
     }
   },
   async updateDocument(req, res){
-    const id = req.body.id;
+    const id = req.params.id;
     const body = {
         name:req.body.name,
         email:req.body.email,
@@ -97,7 +97,7 @@ module.exports = {
     }
   },
   async deleteDocument(req, res){
-    const id = req.body.id;
+    const id = req.params.id;
     try {
       const count = await userQuery.deleteDoc(id);
       return res.status(200).send({

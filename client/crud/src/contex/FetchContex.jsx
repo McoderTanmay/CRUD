@@ -13,7 +13,6 @@ export const FetchContextProvider = ({children, fetchRecords}) =>{
             try {
                 setIsLoading(true);
                 const response = await getRequest(`${baseUrl}/User/GetDocuments`);
-                console.log(baseUrl);
                 setIsLoading(false);
                 setRecords(response?.data);
             } catch (error) {

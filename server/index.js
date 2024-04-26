@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const uri = "mongodb://127.0.0.1:27017/xyz"
+
+const uri = process.env.MONGODBURI
 const USER_ROUTER = require("./routers/userRoutes");
 
 const app = express();

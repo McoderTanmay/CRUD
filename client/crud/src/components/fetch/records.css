@@ -9,8 +9,13 @@
 .name,.email,.phone{
     padding-top: 1em;
 }
-.update-btn{
-    text-decoration: none;
-    background-color: rgb(105, 0, 105);
-    color: white;
+.update-btn,.delete-btn{
+    background-color: rgb(76, 44, 125) !important;
+    color: white !important;
+    border: none !important;
+}
+.custom-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

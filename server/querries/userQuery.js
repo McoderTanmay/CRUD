@@ -11,7 +11,7 @@ module.exports = {
     return await userInfo.find({ name: data });
   },
   async findDocById(userID){
-    return await userInfo.findOne(userID).exec();
+    return await userInfo.findOne({_id:userID});
   },
   async updateDoc(data, id){
     const filter = {_id:id};
