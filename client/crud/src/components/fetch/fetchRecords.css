@@ -15,3 +15,10 @@
     background-color: rgb(76, 44, 125) !important;
     border: none !important;
 }
+.loading{
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    justify-content: center;
+    margin-top: 2rem;
+}

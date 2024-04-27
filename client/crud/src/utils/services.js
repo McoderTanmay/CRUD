@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:5000";
+export const baseUrl = "https://crud-git-master-tanmay-sontakkes-projects.vercel.app";
 
 export const getRequest = async (url) => {
   try {
