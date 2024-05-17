@@ -63,8 +63,10 @@ function App() {
   return (
     <div className="app">
       <FetchContextProvider fetchRecords={userData}>
+        //edit
           <AddRecord onAdd={addUserDetails}></AddRecord>
-          <FetchRecords
+        //edit  
+        <FetchRecords
             onRecordId={deleteRecord}
             onUpdateRecordId={updateRecord}
           ></FetchRecords>
