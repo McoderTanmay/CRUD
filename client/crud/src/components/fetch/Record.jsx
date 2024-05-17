@@ -14,6 +14,7 @@ function Records({ details, onDelete, onUpdate}) {
   }
   return (
     <Card className="me-3 mt-4" style={{ width: '18rem' }}>
+      <Card.Img variant="top" src= />
       <Card.Body>
         <Card.Text>{details?.profile?.firstName} {details?.profile?.lastName}</Card.Text>
         <Card.Text>{details?.profile?.email}</Card.Text>
