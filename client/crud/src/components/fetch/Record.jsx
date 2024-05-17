@@ -18,10 +18,12 @@ function Records({ details, onDelete, onUpdate}) {
         <Card.Text>{details?.name}</Card.Text>
         <Card.Text>{details?.email}</Card.Text>
         <Card.Text>{details?.phone}</Card.Text>
+        //edit
         <div className="custom-btn">
           <Button className="delete-btn" onClick={deleteHandeler}>Delete</Button>
           <Button className="update-btn" onClick={updateHandeler}>Update</Button>
         </div>
+        //edit
       </Card.Body>
     </Card>
   );
