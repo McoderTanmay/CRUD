@@ -15,9 +15,10 @@ function Records({ details, onDelete, onUpdate}) {
   return (
     <Card className="me-3 mt-4" style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Text>{details?.name}</Card.Text>
-        <Card.Text>{details?.email}</Card.Text>
-        <Card.Text>{details?.phone}</Card.Text>
+        <Card.Text>{details?.profile?.firstName} {details?.profile?.lastName}</Card.Text>
+        <Card.Text>{details?.profile?.email}</Card.Text>
+        <Card.Text>{details?.jobTitle}</Card.Text>
+        <Card.Text>{details?.Bio}</Card.Text>
         //edit
         <div className="custom-btn">
           <Button className="delete-btn" onClick={deleteHandeler}>Delete</Button>
